@@ -1,0 +1,21 @@
+{
+  "file_format_version" : "1.0.0",
+  "layer" : {
+    "name": "VK_LAYER_force_priority",
+    "type": "GLOBAL",
+    "library_path": "@ld_lib_dir@libvkforcepriority.so",
+    "api_version": "1.2.178",
+    "implementation_version": "1",
+    "description": "a layer to force global queue priority",
+    "functions": {
+      "vkGetInstanceProcAddr": "layer_GetInstanceProcAddr",
+      "vkGetDeviceProcAddr":   "layer_GetDeviceProcAddr"
+    },
+    "enable_environment": {
+      "ENABLE_VKPRIORITY": "1"
+    },
+    "disable_environment": {
+      "DISABLE_VKPRIORITY": "1"
+    }
+  }
+}
