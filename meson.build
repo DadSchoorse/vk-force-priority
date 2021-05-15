@@ -14,12 +14,14 @@ data_dir = get_option('datadir')
 
 vulkan_layer_dir = join_paths(data_dir, 'vulkan', 'implicit_layer.d')
 
-configure_file(
-    input : 'vkforcepriority.json.in',
-    output : 'vkforcepriority.json',
-    configuration : {'ld_lib_dir' : ld_lib_dir},
-    install : true,
-    install_dir : vulkan_layer_dir,
-)
+if get_option('with_json')
+    configure_file(
+        input : 'vkforcepriority.json.in',
+        output : 'vkforcepriority.json',
+        configuration : {'ld_lib_dir' : ld_lib_dir},
+        install : true,
+        install_dir : vulkan_layer_dir,
+    )
+endif
 
 subdir('src')
