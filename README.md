@@ -1,5 +1,5 @@
 # vk-force-priority
-vk-force-priority allows you to controll the global priority of any vulkan application.
+vk-force-priority allows you to control the global priority of any vulkan application.
 
 ## Building from Source
 
