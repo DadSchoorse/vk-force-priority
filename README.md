@@ -39,4 +39,4 @@ ninja -C builddir.32 install
 ENABLE_VKPRIORITY=1 VK_PRIORITY=medium yourcommand
 ```
 
-Possible `VK_PRIORITY` value are `low`, `medium`, `high`, `realtime`. `high` and `realtime` might fail with `VK_ERROR_NOT_PERMITTED_EXT`.
+Possible `VK_PRIORITY` values are `low`, `medium`, `high` or `realtime`. `high` and `realtime` might fail with `VK_ERROR_NOT_PERMITTED_EXT`.
